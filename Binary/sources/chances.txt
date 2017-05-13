@@ -1,0 +1,2 @@
+1 10 Vous_gagnez_dix_euros
+6 100200 Vous_payez_100E_pour_vos_maisons_et|200E_pour_vos_hotels

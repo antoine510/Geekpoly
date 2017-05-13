@@ -1,0 +1,19 @@
+# CMake
+/Build
+/lib
+
+# Temp files
+*~
+~*
+
+# Compiled Object files
+*.o
+*.obj
+
+# Debugging files
+*.pbd
+*.exp
+*.ilk
+
+#MacOS cache
+*.DS_Store
