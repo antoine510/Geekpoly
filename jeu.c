@@ -147,7 +147,7 @@ void search_lines (const char *text, unsigned int posx, unsigned int posy, unsig
 
     if (limit != NULL)
     {
-        int i = 0, lenght = strlen(text) - strlen(limit);
+        int i = 0, lenght = (int)(strlen(text) - strlen(limit));
         char* text_before = malloc((lenght + 1) * sizeof(char));
         char* text_after = malloc((strlen(limit) + 1) * sizeof(char));
         strcpy(text_after, limit);

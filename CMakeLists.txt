@@ -1,28 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
 project(Monopoly)
 
-option (ENABLE_32_BITS "Enable 32 bits compilation" OFF)
-
-include_directories("./" "SDL/include/")
+include_directories("./" "SDL2-2.0.18/include/")
 
 if(WIN32)
-	if(CMAKE_GENERATOR MATCHES "Win64")
-		if(ENABLE_32_BITS)
-			message( FATAL_ERROR "Win64 compiler incompatible with 32 bits option." )
-		else()
-			link_directories("SDL/lib/x64")
-		endif()
-	else()
-		link_directories("SDL/lib/Win32")
-		if(NOT ENABLE_32_BITS)
-			message( STATUS "Win32 compiler chosen, enabling 32 bits.")
-		endif()
-	endif()
+	link_directories("SDL2-2.0.18/lib/x64")
 	add_definitions(-DWIN32_LEAN_AND_MEAN -D_CRT_SECURE_NO_WARNINGS)
-elseif (APPLE)
 else()
-	add_definitions()
-	link_directories()
+	message(FATAL "Unsuported configuration")
 endif ()
 
 file(GLOB SRC_FILES

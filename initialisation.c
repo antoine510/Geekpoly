@@ -220,7 +220,7 @@ void init_joueurs (Params_ *Params)
                                 case 1:
                                     if (current_name[0] != '\0')
                                     {
-                                        int name_lenght = strlen(current_name);
+                                        int name_lenght = (int)strlen(current_name);
 
                                         Params->Joueurs[current_player].name = malloc((name_lenght + 1) * sizeof(char));
                                         for (i = 0; i < name_lenght; i++)
